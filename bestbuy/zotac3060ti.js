@@ -20,7 +20,6 @@ const fs = require('fs');
         try {
             let response = await page.goto('https://www.bestbuy.ca/en-ca/product/zotac-geforce-rtx-3060-ti-twin-edge-oc-8gb-gddr6-video-card/15178452');
             if (response.status() !== 404) {
-                console.log(response.status());
                 isPageLoaded = true;
             }
         } catch (err) {
@@ -29,7 +28,6 @@ const fs = require('fs');
                 await page.click('text=ZOTAC GeForce RTX 3060 Ti Twin Edge OC 8GB GDDR6 Video Card', { timeout: 30000 });
                 let response = await page.waitForNavigation()
                 if (response.status() !== 404) {
-                    console.log(response.status());
                     isPageLoaded = true;
                 }
             } catch (err) {

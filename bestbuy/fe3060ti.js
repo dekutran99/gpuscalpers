@@ -27,7 +27,7 @@ const fs = require('fs');
                 await page.goto('https://www.bestbuy.ca/en-ca/collection/rtx-30-series-graphic-cards/316108?path=category%253AComputers%2B%2526%2BTablets%253Bcategory%253APC%2BComponents%253Bcategory%253AGraphics%2BCards%253Bcustom0graphicscardmodel%253AGeForce%2BRTX%2B3060%2BTi', { timeout: 30000 });
                 await page.click('text=NVIDIA GeForce RTX 3060 Ti 8GB GDDR6 Video Card', { timeout: 30000 });
                 let response = await page.waitForNavigation();
-                if (response.status !== 404) {
+                if (response.status() !== 404) {
                     isPageLoaded = true;
                 }
             } catch (err) {
