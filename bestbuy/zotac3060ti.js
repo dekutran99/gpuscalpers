@@ -130,7 +130,7 @@ const fs = require('fs');
             // screenshot confirmation page
             await page.screenshot({ path: `${GPU}.png` })
             .then(() => {
-                writeToLog('order placed');
+                writeToLog('confirmation page');
             })
             .catch(err => {
                 console.error(err);
