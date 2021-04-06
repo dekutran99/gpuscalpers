@@ -88,7 +88,7 @@ const fs = require('fs');
             .then(() => {
                 writeToLog('signing in');
             })
-            .catch(er => {
+            .catch(err => {
                 console.error(err);
                 writeToLog(`an error occured\n ${err}`);
             });
