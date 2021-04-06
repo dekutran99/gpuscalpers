@@ -1,2 +1,3 @@
 node_modules
-bestbuy/log.txt
+bestbuy/*.txt
+bestbuy/*.png
